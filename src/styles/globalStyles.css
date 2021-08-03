@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Walkway";
+  font-style: normal;
+  font-weight: 600 700;
+  src: url(/fonts/Walkway-SemiBold.ttf), url(/fonts/Walkway-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Walkway";
+  font-style: oblique;
+  font-weight: 700;
+  src: url(/fonts/Walkway-Oblique-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 400;
+  src: url(/fonts/MonumentExtended-Regular.otf);
+  font-display: swap;
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-gray-800 to-neon bg-clip-text text-transparent;
+  }
+}
+
+* {
+  @apply text-white;
+  /* cursor: none !important; */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply min-h-screen bg-black;
+}
+
+.hamburger-menu {
+  transition: transform 150ms;
+}
+
+.hamburger-menu:hover {
+  animation: shakeHamburger 200ms;
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-tr from-teal-300 to-blue-300 bg-no-repeat bg-cover;
+}
+
+.radial-bg {
+  background: rgb(144, 205, 244);
+  background: radial-gradient(
+    circle,
+    rgba(144, 205, 244, 1) 0%,
+    rgba(190, 227, 248, 1) 33%,
+    rgba(178, 245, 234, 1) 66%,
+    rgba(129, 230, 217, 1) 100%
+  );
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+}
+
+.custom-cursor {
+  @apply fixed w-72 h-72 z-50;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s ease-out;
+}
+
+.ring-cursor {
+  @apply w-72 inset-y-14 absolute pointer-events-none;
+}
+
+.ringOne {
+  animation: rotateFirstRing 6s linear infinite;
+}
+
+.ringTwo {
+  animation: rotateFirstRing 10s linear infinite;
+}
+
+@keyframes shakeHamburger {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes rotateFirstRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
