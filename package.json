@@ -1,11 +1,30 @@
 {
+  "name": "ahmadmuslih.dev",
+  "description": "Ahmad Muslih Zain's personal website.",
+  "author": "Ahmad Muslih Zain <ahmad.muslih22@gmail.com>",
+  "homepage": "https://ahmadmuslih.vercel.app/",
   "private": true,
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aemzayn/ahmadmuslih.dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aemzayn/ahmadmuslih.dev/issues"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "tailwind",
+    "framer",
+    "motion"
+  ],
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "framer-motion": "^4.1.17",
