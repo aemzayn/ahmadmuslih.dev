@@ -7,11 +7,7 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-black;
-}
-
-body.loading {
-  @apply overflow-hidden h-screen;
+  @apply bg-darkBlue;
 }
 
 .custom-cursor {

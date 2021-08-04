@@ -1,8 +1,9 @@
 const Hero = () => {
   return (
     <div
-      id="hero-section"
-      className="w-full min-h-screen bg-black relative flex items-center justify-center"
+      data-scroll-section
+      id="hero"
+      className="w-full bg-black h-screen flex items-center justify-center"
     >
       <div className="absolute inset-5">
         <div
@@ -11,12 +12,16 @@ const Hero = () => {
         >
           <div className="flex items-center justify-between text-neon">
             <button
-              onClick={() => alert("click")}
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              data-scroll-position="top"
+              data-scroll-target="#hero"
               className="text-neon hover:text-white duration-100 text-lg font-walkway"
             >
               ahmadmuslihzain
             </button>
-            <button onClick={() => alert("Website is on construction")}>
+            <button onClick={() => alert('Website is under construction')}>
               <img
                 src="/images/hamburger.png"
                 alt="hamburger menu"
@@ -25,9 +30,23 @@ const Hero = () => {
             </button>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between relative">
-            <div className="text-4xl md:text-8xl lg:text-9xl font-monument flex-1 select-none ">
-              <h1 className="gradient-text">Front end</h1>
-              <h1 className="gradient-text">Developer</h1>
+            <div className="text-4xl md:text-8xl  lg:text-9xl font-monument flex-1 select-none ">
+              <h1
+                data-scroll
+                data-scroll-speed={5}
+                data-scroll-target="#hero"
+                className="gradient-text"
+              >
+                Front end
+              </h1>
+              <h1
+                data-scroll
+                data-scroll-speed={8}
+                data-scroll-target="#hero"
+                className="gradient-text"
+              >
+                Developer
+              </h1>
             </div>
             <a
               href="mailto:ahmadmuslihzain@gmail.com"
@@ -45,7 +64,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

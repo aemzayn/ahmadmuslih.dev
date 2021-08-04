@@ -1,23 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react'
 
 const CustomCursor = () => {
-  const cursorRef = useRef(null);
+  const cursorRef = useRef(null)
 
   const onMouseMove = (e) => {
-    const { clientX: x, clientY: y } = e;
-    cursorRef.current.style.left = `${x}px`;
-    cursorRef.current.style.top = `${y}px`;
-  };
+    const { clientX: x, clientY: y } = e
+    cursorRef.current.style.left = `${x}px`
+    cursorRef.current.style.top = `${y}px`
+  }
 
   useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener('mousemove', onMouseMove)
     return () => {
-      document.removeEventListener("mousemove", onMouseMove);
-    };
-  }, []);
+      document.removeEventListener('mousemove', onMouseMove)
+    }
+  }, [])
 
   return (
-    <div className="custom-cursor hidden md:block" ref={cursorRef}>
+    <div className="custom-cursor hidden xl:block" ref={cursorRef}>
       <img
         src="/images/ring.png"
         alt="ring"
@@ -31,7 +31,7 @@ const CustomCursor = () => {
         className="ringTwo ring-cursor"
       />
     </div>
-  );
-};
+  )
+}
 
-export default CustomCursor;
+export default CustomCursor

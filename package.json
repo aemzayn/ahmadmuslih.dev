@@ -1,7 +1,10 @@
 {
   "name": "ahmadmuslih.dev",
   "description": "Ahmad Muslih Zain's personal website.",
-  "author": "Ahmad Muslih Zain <ahmad.muslih22@gmail.com>",
+  "author": {
+    "name": "Ahmad Muslih Zain",
+    "email": "ahamdmuslihzain@gmail.com"
+  },
   "homepage": "https://ahmadmuslih.vercel.app/",
   "private": true,
   "version": "1.0.0",
@@ -22,13 +25,11 @@
     "nextjs",
     "next",
     "tailwind",
-    "framer",
-    "motion"
+    "locomotive",
+    "scroll"
   ],
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
-    "framer-motion": "^4.1.17",
-    "gsap": "^3.7.1",
     "locomotive-scroll": "^4.1.1",
     "next": "latest",
     "next-seo": "^4.26.0",
