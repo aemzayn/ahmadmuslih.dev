@@ -1,5 +1,4 @@
 import "@/styles/globalStyles.css";
-import "@/styles/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
 import { DefaultSeo } from "next-seo";
 import SEO from "@/helpers/seo.config";

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Walkway";
+  font-style: normal;
+  font-weight: 600 700;
+  src: url(/fonts/Walkway-SemiBold.ttf), url(/fonts/Walkway-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Walkway";
+  font-style: oblique;
+  font-weight: 700;
+  src: url(/fonts/Walkway-Oblique-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  font-weight: 400;
+  src: url(/fonts/MonumentExtended-Regular.otf);
+  font-display: swap;
+}

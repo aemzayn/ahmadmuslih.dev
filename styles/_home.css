@@ -1,0 +1,23 @@
+.hamburger-menu {
+  transition: transform 150ms;
+}
+
+.hamburger-menu:hover {
+  animation: shakeHamburger 200ms;
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+}
+
+@keyframes shakeHamburger {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
