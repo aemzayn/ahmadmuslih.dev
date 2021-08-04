@@ -8,15 +8,21 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "framer-motion": "^4.1.17",
     "gsap": "^3.7.1",
+    "locomotive-scroll": "^4.1.1",
     "next": "latest",
+    "next-seo": "^4.26.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-locomotive-scroll": "^0.1.8"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "tslib": "^2.3.0"
   }
 }

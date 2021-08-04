@@ -44,27 +44,39 @@ body {
   @apply min-h-screen bg-black;
 }
 
+body.loading {
+  @apply overflow-hidden h-screen;
+}
+
+// TODO: add dots background
+
+/* 
+.hero-main {
+  --bg-color: hsl(51, 23%, 94%);
+  --dot-color: rgb(255, 255, 255);
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--bg-color) (var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center,
+    linear-gradient(
+        var(--bg-color) (var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center,
+    var(--dot-color);
+  background-size: var(--dot-space) var(--dot-space);
+} */
+
 .hamburger-menu {
   transition: transform 150ms;
 }
 
 .hamburger-menu:hover {
   animation: shakeHamburger 200ms;
-}
-
-.bg-gradient {
-  @apply bg-gradient-to-tr from-teal-300 to-blue-300 bg-no-repeat bg-cover;
-}
-
-.radial-bg {
-  background: rgb(144, 205, 244);
-  background: radial-gradient(
-    circle,
-    rgba(144, 205, 244, 1) 0%,
-    rgba(190, 227, 248, 1) 33%,
-    rgba(178, 245, 234, 1) 66%,
-    rgba(129, 230, 217, 1) 100%
-  );
 }
 
 .vertical-text {

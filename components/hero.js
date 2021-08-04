@@ -1,8 +1,14 @@
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen bg-black relative flex items-center justify-center">
+    <div
+      id="hero-section"
+      className="w-full min-h-screen bg-black relative flex items-center justify-center"
+    >
       <div className="absolute inset-5">
-        <div className="absolute flex flex-col justify-between bg-darkBlue inset-0 p-5 flex-1 border border-neon">
+        <div
+          id="hero-main"
+          className="absolute flex flex-col justify-between bg-darkBlue inset-0 p-5 flex-1 border border-neon"
+        >
           <div className="flex items-center justify-between text-neon">
             <button
               onClick={() => alert("click")}
