@@ -50,7 +50,7 @@ const Projects = () => {
           data-scroll-target="#projects"
           data-scroll-position="top"
         >
-          <h1 className="title font-monument text-4xl mt-20 md:mt-40 ml-8 md:ml-20 gradient-text-light">
+          <h1 className="title font-monument text-4xl md:mt-40 ml-8 md:ml-20 gradient-text-light">
             Past projects —
           </h1>
         </div>

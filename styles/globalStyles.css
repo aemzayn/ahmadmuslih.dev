@@ -1,9 +1,5 @@
-@import "_fonts.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import "_typography.css";
-@import "_globals.css";
-@import "_home.css";
+@import '_tailwind.css';
+@import '_fonts.css';
+@import '_typography.css';
+@import '_globals.css';
+@import '_home.css';
