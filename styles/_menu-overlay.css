@@ -6,12 +6,5 @@
         @apply text-neon;
       }
     }
-
-    a {
-      @apply relative duration-150 font-monument;
-      &:hover {
-        @apply text-teal-400;
-      }
-    }
   }
 }

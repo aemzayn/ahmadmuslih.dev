@@ -7,13 +7,19 @@ import Contact from './contact'
 import { HiX } from 'react-icons/hi'
 import { useEffect } from 'react'
 
-const NavItem = ({ route, isActive }) => {
+const NavItem = ({ route, isActive, router, setClose }) => {
   return (
     <div className="menu-item">
-      <h1 className={`hover:cursor-pointer ${isActive && 'active'}`}>
-        <Link href={route.route}>
-          <a className="font-monument">{route.label}</a>
-        </Link>
+      <h1
+        onClick={() => {
+          router.push(route.route)
+          setClose()
+        }}
+        className={`duration-150 hover:cursor-pointer hover:text-teal-500 font-monument ${
+          isActive && 'active'
+        }`}
+      >
+        {route.label}
       </h1>
     </div>
   )
@@ -66,19 +72,21 @@ const MenuOverlay = () => {
   return (
     <div
       id="menu-overlay"
-      className={`absolute h-screen w-full bg-black z-10 ${
+      className={`absolute h-screen w-full bg-gradient-to-b from-black  to-darkBlue z-10 ${
         isOpen && 'overlay-open'
       }`}
     >
       <div className="px-8 py-10 relative lg:px-12 lg:py-10 h-full">
         <div className="flex flex-col h-full gap-10 lg:gap-0 lg:justify-between">
           <div className="flex flex-col-reverse lg:flex-row justify-between items-start">
-            <div className="flex flex-col flex-1 mt-10 lg:mt-20 md:mt-0 gap-4 md:gap-8 lg:gap-12 text-3xl md:text-4xl lg:text-6xl">
+            <div className="flex flex-col mt-10 lg:mt-20 md:mt-0 gap-4 md:gap-8 lg:gap-12 text-3xl md:text-4xl lg:text-6xl">
               {Routes.map((route, index) => (
                 <NavItem
                   key={index}
                   route={route}
                   isActive={router.pathname === route.route}
+                  router={router}
+                  setClose={setClose}
                 />
               ))}
             </div>

@@ -1,7 +1,7 @@
 export default {
   defaultTitle: 'Ahmad Muslih Zain',
   description: "Ahmad Muslih Zain's personal website.",
-  titleTemplate: '%s | Ahmad Muslih Zain',
+  titleTemplate: '• %s — Ahmad Muslih Zain',
   openGraph: {
     type: 'website',
     locale: 'en_US',
