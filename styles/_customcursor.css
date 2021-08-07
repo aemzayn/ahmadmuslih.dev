@@ -1,0 +1,30 @@
+.custom-cursor {
+  @apply w-72 h-72;
+  z-index: 1000;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  transition: transform 0.25s ease-out;
+}
+
+.ring-cursor {
+  @apply w-72 inset-y-14 absolute pointer-events-none;
+}
+
+.ringOne {
+  animation: rotateFirstRing 6s linear infinite;
+}
+
+.ringTwo {
+  animation: rotateFirstRing 10s linear infinite;
+}
+
+@keyframes rotateFirstRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

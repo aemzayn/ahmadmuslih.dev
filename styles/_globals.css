@@ -9,31 +9,3 @@ html {
 body {
   @apply bg-darkBlue;
 }
-
-.custom-cursor {
-  @apply fixed w-72 h-72 z-50;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: all 0.25s ease-out;
-}
-
-.ring-cursor {
-  @apply w-72 inset-y-14 absolute pointer-events-none;
-}
-
-.ringOne {
-  animation: rotateFirstRing 6s linear infinite;
-}
-
-.ringTwo {
-  animation: rotateFirstRing 10s linear infinite;
-}
-
-@keyframes rotateFirstRing {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

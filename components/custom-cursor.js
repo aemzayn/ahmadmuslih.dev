@@ -3,10 +3,11 @@ import { useEffect, useRef } from 'react'
 const CustomCursor = () => {
   const cursorRef = useRef(null)
 
-  const onMouseMove = (e) => {
-    const { clientX: x, clientY: y } = e
-    cursorRef.current.style.left = `${x}px`
-    cursorRef.current.style.top = `${y}px`
+  const onMouseMove = (event) => {
+    const { clientX, clientY } = event
+    const mouseX = clientX - cursorRef.current.clientWidth / 2
+    const mouseY = clientY - cursorRef.current.clientHeight / 2
+    cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
   }
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const CustomCursor = () => {
   }, [])
 
   return (
-    <div className="custom-cursor hidden xl:block" ref={cursorRef}>
+    <div className="custom-cursor" ref={cursorRef}>
       <img
         src="/images/ring.png"
         alt="ring"
