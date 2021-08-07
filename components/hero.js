@@ -1,4 +1,7 @@
+import useMenu from 'hooks/useMenu'
+
 const Hero = () => {
+  const { setOpen, toggle } = useMenu()
   return (
     <div
       data-scroll-section
@@ -21,7 +24,7 @@ const Hero = () => {
             >
               ahmadmuslihzain
             </button>
-            <button onClick={() => alert('Website is under construction')}>
+            <button onClick={() => toggle()}>
               <img
                 src="/images/hamburger.png"
                 alt="hamburger menu"

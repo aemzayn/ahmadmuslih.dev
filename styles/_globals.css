@@ -9,3 +9,27 @@ html {
 body {
   @apply bg-darkBlue;
 }
+
+html.no-scroll {
+  @apply overflow-hidden h-screen;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-neon bg-opacity-50 duration-150;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-90;
+}
