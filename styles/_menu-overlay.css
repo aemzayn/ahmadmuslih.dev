@@ -1,0 +1,17 @@
+#menu-overlay {
+  position: relative;
+  .menu-item {
+    h1 {
+      &.active {
+        @apply text-neon;
+      }
+    }
+
+    a {
+      @apply relative duration-150 font-monument;
+      &:hover {
+        @apply text-teal-400;
+      }
+    }
+  }
+}

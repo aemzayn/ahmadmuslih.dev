@@ -65,7 +65,9 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <Contact />
+      <div className="px-10 pt-20 pb-10">
+        <Contact />
+      </div>
     </section>
   )
 }
