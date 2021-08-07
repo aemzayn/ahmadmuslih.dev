@@ -20,7 +20,7 @@ const CustomCursor = () => {
   }, [])
 
   return (
-    <div className="custom-cursor" ref={cursorRef}>
+    <div className="custom-cursor hidden lg:block" ref={cursorRef}>
       <img
         src="/images/ring.png"
         alt="ring"

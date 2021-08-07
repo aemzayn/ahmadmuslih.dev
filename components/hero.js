@@ -20,7 +20,7 @@ const Hero = () => {
               data-scroll-speed="-2"
               data-scroll-position="top"
               data-scroll-target="#hero"
-              className="text-neon hover:text-white duration-100 text-lg font-walkway"
+              className="text-neon hover:text-white duration-100 text-lg font-walkway tracking-widest"
             >
               ahmadmuslihzain
             </button>
