@@ -1,5 +1,11 @@
 #menu-overlay {
   position: relative;
+  display: none;
+
+  &.overlay-open {
+    display: block;
+  }
+
   .menu-item {
     h1 {
       &.active {

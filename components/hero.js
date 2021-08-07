@@ -1,7 +1,17 @@
+import { gsap } from 'gsap'
 import useMenu from 'hooks/useMenu'
 
 const Hero = () => {
-  const { setOpen, toggle } = useMenu()
+  const { setOpen } = useMenu()
+  const tl = gsap.timeline()
+  const openMenu = () => {
+    setOpen()
+    tl.to('#menu-overlay', {
+      duration: 1,
+      opacity: 1
+    })
+  }
+
   return (
     <div
       data-scroll-section
@@ -24,7 +34,7 @@ const Hero = () => {
             >
               ahmadmuslihzain
             </button>
-            <button onClick={() => toggle()}>
+            <button onClick={openMenu}>
               <img
                 src="/images/hamburger.png"
                 alt="hamburger menu"

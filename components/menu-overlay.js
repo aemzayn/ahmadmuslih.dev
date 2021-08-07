@@ -1,11 +1,8 @@
-import useMenu from 'hooks/useMenu'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { gsap } from 'gsap'
-
-import Contact from './contact'
 import { HiX } from 'react-icons/hi'
-import { useEffect } from 'react'
+import { gsap } from 'gsap'
+import useMenu from 'hooks/useMenu'
+import Contact from './contact'
 
 const NavItem = ({ route, isActive, router, setClose }) => {
   return (
@@ -31,50 +28,29 @@ const Routes = [
   { label: 'Projects', route: '/projects' }
 ]
 
-const tl = gsap.timeline()
-
 const MenuOverlay = () => {
-  const { isOpen, setClose, isClose } = useMenu()
+  const { setClose } = useMenu()
   const router = useRouter()
-
-  useEffect(() => {
-    // if (isOpen) {
-    //   tl.from('#menu-overlay', {
-    //     css: {
-    //       display: 'none'
-    //     },
-    //     duration: 1.5,
-    //     x: -2000,
-    //     ease: 'power3.in'
-    //   })
-    //   tl.from(['.menu-item', '.social-links', '#close-btn'], {
-    //     duration: 0.3,
-    //     ease: 'power3.in',
-    //     opacity: 0
-    //   })
-    // }
-  }, [])
+  const tl = gsap.timeline()
 
   const handleClose = () => {
     tl.to('#menu-overlay', {
-      duration: 1,
-      x: -2000,
+      duration: 0.3,
+      opacity: 0
+    }).from('#hero', {
+      duration: 0.3,
       opacity: 0
     })
 
-    setClose()
-  }
-
-  if (isClose) {
-    return null
+    setTimeout(() => {
+      setClose()
+    }, 300)
   }
 
   return (
     <div
       id="menu-overlay"
-      className={`absolute h-screen w-full bg-gradient-to-b from-black  to-darkBlue z-10 ${
-        isOpen && 'overlay-open'
-      }`}
+      className="absolute h-screen w-full bg-gradient-to-b from-black  to-darkBlue z-10"
     >
       <div className="px-8 py-10 relative lg:px-12 lg:py-10 h-full">
         <div className="flex flex-col h-full gap-10 lg:gap-0 lg:justify-between">
@@ -101,6 +77,7 @@ const MenuOverlay = () => {
               >
                 <HiX
                   size={40}
+                  fill="#80FFDB"
                   className="transform duration-300 hover:rotate-180 "
                 />
               </button>
@@ -108,7 +85,7 @@ const MenuOverlay = () => {
           </div>
 
           <div className="social-links">
-            <div className="w-full h-[1px] rounded-full bg-neon bg-opacity-60 mb-10" />
+            <div className="w-full h-1 rounded-full bg-neon bg-opacity-60 mb-10" />
             <div className="flex items-center">
               <Contact iconSize={30} />
 

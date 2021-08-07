@@ -66,7 +66,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="px-10 pt-20 pb-10">
-        <Contact />
+        <Contact iconSize={20} />
       </div>
     </section>
   )

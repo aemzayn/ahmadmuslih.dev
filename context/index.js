@@ -6,15 +6,19 @@ export const GlobalStateContext = createContext()
 export const GlobalDisplayContext = createContext()
 
 const globalReducer = (state, action) => {
+  const menuOverlay = document?.getElementById('menu-overlay')
+
   switch (action.type) {
     case types.MENU_OPEN:
       document.documentElement.classList.add('no-scroll')
+      menuOverlay.classList.add('overlay-open')
       return {
         ...state,
         menu: true
       }
     case types.MENU_CLOSE:
       document.documentElement.classList.remove('no-scroll')
+      menuOverlay.classList.remove('overlay-open')
       return {
         ...state,
         menu: false
