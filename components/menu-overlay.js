@@ -3,6 +3,7 @@ import { HiX } from 'react-icons/hi'
 import { gsap } from 'gsap'
 import useMenu from 'hooks/useMenu'
 import Contact from './contact'
+import { ROUTES } from '@/constants/navigation'
 
 const NavItem = ({ route, isActive, router, setClose }) => {
   return (
@@ -21,12 +22,6 @@ const NavItem = ({ route, isActive, router, setClose }) => {
     </div>
   )
 }
-
-const Routes = [
-  { label: 'Home', route: '/' },
-  { label: 'Blog', route: '/blog' },
-  { label: 'Projects', route: '/projects' }
-]
 
 const MenuOverlay = () => {
   const { setClose } = useMenu()
@@ -56,7 +51,7 @@ const MenuOverlay = () => {
         <div className="flex flex-col h-full gap-10 lg:gap-0 lg:justify-between">
           <div className="flex flex-col-reverse lg:flex-row justify-between items-start">
             <div className="flex flex-col mt-10 lg:mt-20 md:mt-0 gap-4 md:gap-8 lg:gap-12 text-3xl md:text-4xl lg:text-6xl">
-              {Routes.map((route, index) => (
+              {ROUTES.map((route, index) => (
                 <NavItem
                   key={index}
                   route={route}
