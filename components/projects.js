@@ -66,7 +66,9 @@ const Projects = () => {
         </div>
       </div>
       <div className="px-10 pt-20 pb-10">
-        <Contact iconSize={20} />
+        <span about="Author name copyright">
+          Ahmad Muslih Zain (c) {new Date().getFullYear()}
+        </span>
       </div>
     </section>
   )
