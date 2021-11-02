@@ -2,8 +2,19 @@ import { NextSeo } from 'next-seo'
 import HamburgerMenu from '@/components/hamburger-menu'
 import Layout from '@/components/layout'
 import Post from '@/components/post'
+import { getAllPosts } from 'lib/posts'
 
-const Posts = () => {
+export function getStaticProps() {
+  const posts = getAllPosts()
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+const Posts = ({ posts }) => {
+  console.log(posts)
   return (
     <Layout>
       <NextSeo title="Posts" />
@@ -17,10 +28,9 @@ const Posts = () => {
             Posts
           </h1>
         </div>
-        <div className="grid grid-cols-1 p-4 md:px-6 gap-4 md:gap-6 md:grid-cols-3 container mt-10">
-          <Post />
-          <Post />
-          <Post />
+        <div className="grid grid-cols-1 p-4 md:px-6 gap-4 md:gap-6 md:grid-cols-3 container max-w-screen-lg mt-10">
+          {posts.length > 0 &&
+            posts.map((post) => <Post key={post.slug} post={post} />)}
         </div>
       </div>
     </Layout>

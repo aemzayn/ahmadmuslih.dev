@@ -51,9 +51,9 @@ const MenuOverlay = () => {
         <div className="flex flex-col h-full gap-10 lg:gap-0 lg:justify-between">
           <div className="flex flex-col-reverse lg:flex-row justify-between items-start">
             <div className="flex flex-col mt-10 lg:mt-20 md:mt-0 gap-4 md:gap-8 lg:gap-12 text-3xl md:text-4xl lg:text-6xl">
-              {ROUTES.map((route, index) => (
+              {ROUTES.map((route) => (
                 <NavItem
-                  key={index}
+                  key={route.route}
                   route={route}
                   isActive={router.pathname === route.route}
                   router={router}
