@@ -14,7 +14,6 @@ export function getStaticProps() {
 }
 
 const Posts = ({ posts }) => {
-  console.log(posts)
   return (
     <Layout>
       <NextSeo title="Posts" />
