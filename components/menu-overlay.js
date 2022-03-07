@@ -3,7 +3,7 @@ import { HiX } from 'react-icons/hi'
 import { gsap } from 'gsap'
 import useMenu from 'hooks/useMenu'
 import Contact from './contact'
-import { ROUTES } from '@/constants/navigation'
+import { ROUTES } from 'constants/navigation'
 
 const NavItem = ({ route, isActive, router, setClose }) => {
   return (
@@ -13,7 +13,7 @@ const NavItem = ({ route, isActive, router, setClose }) => {
           router.push(route.route)
           setClose()
         }}
-        className={`duration-150 hover:cursor-pointer hover:text-teal-500 font-monument ${
+        className={`font-monument duration-150 hover:cursor-pointer hover:text-teal-500 ${
           isActive && 'active'
         }`}
       >
@@ -31,10 +31,10 @@ const MenuOverlay = () => {
   const handleClose = () => {
     tl.to('#menu-overlay', {
       duration: 0.3,
-      opacity: 0
+      opacity: 0,
     }).from('#hero', {
       duration: 0.3,
-      opacity: 0
+      opacity: 0,
     })
 
     setTimeout(() => {
@@ -45,12 +45,12 @@ const MenuOverlay = () => {
   return (
     <div
       id="menu-overlay"
-      className="absolute h-screen w-full bg-gradient-to-b from-black  to-darkBlue z-10"
+      className="absolute z-10 h-screen w-full bg-gradient-to-b  from-black to-darkBlue"
     >
-      <div className="px-8 py-10 relative lg:px-12 lg:py-10 h-full">
-        <div className="flex flex-col h-full gap-10 lg:gap-0 lg:justify-between">
-          <div className="flex flex-col-reverse lg:flex-row justify-between items-start">
-            <div className="flex flex-col mt-10 lg:mt-20 md:mt-0 gap-4 md:gap-8 lg:gap-12 text-3xl md:text-4xl lg:text-6xl">
+      <div className="relative h-full px-8 py-10 lg:px-12 lg:py-10">
+        <div className="flex h-full flex-col gap-10 lg:justify-between lg:gap-0">
+          <div className="flex flex-col-reverse items-start justify-between lg:flex-row">
+            <div className="mt-10 flex flex-col gap-4 text-3xl md:mt-0 md:gap-8 md:text-4xl lg:mt-20 lg:gap-12 lg:text-6xl">
               {ROUTES.map((route) => (
                 <NavItem
                   key={route.route}
@@ -80,17 +80,17 @@ const MenuOverlay = () => {
           </div>
 
           <div className="social-links">
-            <div className="w-full h-1 rounded-full bg-neon bg-opacity-60 mb-10" />
+            <div className="mb-10 h-1 w-full rounded-full bg-neon bg-opacity-60" />
             <div className="flex items-center">
               <Contact iconSize={30} />
 
-              <div className="hidden md:inline-block tracking-widest text-center relative mt-auto">
+              <div className="relative mt-auto hidden text-center tracking-widest md:inline-block">
                 <span>ahmadmuslihzain</span>
               </div>
             </div>
           </div>
 
-          <div className="md:hidden text-center relative mt-auto tracking-widest">
+          <div className="relative mt-auto text-center tracking-widest md:hidden">
             <span>ahmadmuslihzain</span>
           </div>
         </div>

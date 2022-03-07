@@ -5,11 +5,11 @@ const Hero = () => {
     <div
       data-scroll-section
       id="hero"
-      className="w-full bg-black h-screen flex items-center justify-center"
+      className="flex h-screen w-full items-center justify-center bg-black"
     >
       <div className="absolute inset-5">
-        <div id="hero-main" className="absolute bg-darkBlue inset-0  flex-1">
-          <main className="flex flex-col justify-between h-full  border border-neon p-5">
+        <div id="hero-main" className="absolute inset-0 flex-1  bg-darkBlue">
+          <main className="flex h-full flex-col justify-between  border border-neon p-5">
             <div className="flex items-center justify-between text-neon">
               <button
                 data-scroll
@@ -17,14 +17,14 @@ const Hero = () => {
                 data-scroll-speed="-2"
                 data-scroll-position="top"
                 data-scroll-target="#hero"
-                className="text-neon hover:text-white duration-100 text-lg font-walkway tracking-widest"
+                className="font-walkway text-lg tracking-widest text-neon duration-100 hover:text-white"
               >
                 ahmadmuslihzain
               </button>
               <HamburgerMenu />
             </div>
-            <div className="flex flex-col md:flex-row md:items-end justify-between relative">
-              <div className="text-4xl md:text-8xl  lg:text-9xl font-monument flex-1 select-none ">
+            <div className="relative flex flex-col justify-between md:flex-row md:items-end">
+              <div className="flex-1 select-none  font-monument text-4xl md:text-8xl lg:text-9xl ">
                 <h1
                   data-scroll
                   data-scroll-speed={5}
@@ -44,13 +44,13 @@ const Hero = () => {
               </div>
               <a
                 href="mailto:ahmadmuslihzain@gmail.com"
-                className="md:hidden tracking-wider text-neon cursor-pointer font-walkway hover:text-white duration-100"
+                className="cursor-pointer font-walkway tracking-wider text-neon duration-100 hover:text-white md:hidden"
               >
                 ahmadmuslihzain@gmail.com
               </a>
               <a
                 href="mailto:ahmadmuslihzain@gmail.com"
-                className="hidden tracking-wider md:block vertical-text text-neon cursor-pointer font-walkway hover:text-white duration-100"
+                className="vertical-text hidden cursor-pointer font-walkway tracking-wider text-neon duration-100 hover:text-white md:block"
               >
                 ahmadmuslihzain@gmail.com
               </a>

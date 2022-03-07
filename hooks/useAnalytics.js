@@ -7,7 +7,7 @@ const useAnalytics = () => {
   const router = useRouter()
   const pageview = (url) => {
     window?.gtag('config', GA_TRACKING_ID, {
-      page_path: url
+      page_path: url,
     })
   }
 
@@ -15,7 +15,7 @@ const useAnalytics = () => {
     window?.gtag('event', action, {
       event_category: category,
       event_label: label,
-      value: value
+      value: value,
     })
   }
 
@@ -28,6 +28,7 @@ const useAnalytics = () => {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.events])
 }
 

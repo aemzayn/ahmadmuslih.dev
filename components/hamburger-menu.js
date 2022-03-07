@@ -4,11 +4,11 @@ const HamburgerMenu = () => {
   const { openMenu } = useMenu()
   return (
     <button onClick={openMenu}>
-      <img
+      {/* <img
         src="/images/hamburger.png"
         alt="hamburger menu"
-        className="w-8 h-8 md:w-10 md:h-10 hamburger-menu"
-      />
+        className="hamburger-menu h-8 w-8 md:h-10 md:w-10"
+      /> */}
     </button>
   )
 }

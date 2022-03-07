@@ -9,7 +9,7 @@ const data = [
     site: 'https://ya-magazine.com/',
     description:
       'Website for Ya! Magazine Media News company. Built with Next Js, Chakra UI and Strapi CMS.',
-    github: 'https://github.com/aemzayn/ya-magz'
+    github: 'https://github.com/aemzayn/ya-magz',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const data = [
     site: 'http://sae-2021.vercel.app/',
     description:
       'Website for Overseas Indonesian Student’s Association Alliance America-Europe Region (OISAA) Symposium 2021, Developed using Next Js and Chakra UI.',
-    github: 'https://github.com/aemzayn/sae-2021'
+    github: 'https://github.com/aemzayn/sae-2021',
   },
   {
     id: 3,
@@ -27,8 +27,8 @@ const data = [
     site: '',
     description:
       'Election (voting) Fullstack application built using React Js, Express, MongoDB and hosted on Digital Ocean.',
-    github: 'https://github.com/aemzayn/pemilu-app'
-  }
+    github: 'https://github.com/aemzayn/pemilu-app',
+  },
 ]
 
 const Projects = () => {
@@ -36,13 +36,13 @@ const Projects = () => {
     <section
       id="projects"
       data-scroll-section
-      className="flex-1 pt-20 bg-gradient-to-b from-black via-darkBlue to-darkBlue max-h-screen"
+      className="max-h-screen flex-1 bg-gradient-to-b from-black via-darkBlue to-darkBlue pt-20"
     >
       <div
         data-scroll-sticky
         data-scroll
         data-scroll-position="#projects"
-        className="flex flex-col px-5 gap-10 py-20 pb-36"
+        className="flex flex-col gap-10 px-5 py-20 pb-36"
       >
         <div
           data-scroll
@@ -50,7 +50,7 @@ const Projects = () => {
           data-scroll-target="#projects"
           data-scroll-position="top"
         >
-          <h1 className="title font-monument text-4xl md:mt-40 ml-8 md:ml-20 gradient-text-light">
+          <h1 className="title gradient-text-light ml-8 font-monument text-4xl md:mt-40 md:ml-20">
             Past projects —
           </h1>
         </div>
@@ -58,7 +58,7 @@ const Projects = () => {
           data-scroll
           data-scroll-target="#projects"
           data-scroll-speed={0.5}
-          className="pt-8 md:pt-16 mr-5 md:mr-20 flex flex-col gap-20 md:gap-28"
+          className="mr-5 flex flex-col gap-20 pt-8 md:mr-20 md:gap-28 md:pt-16"
         >
           {data.map((project, id) => (
             <FeaturedProject key={id} project={project} delay={id + 1} />

@@ -21,7 +21,7 @@ const CustomCursor = () => {
 
   return (
     <div className="custom-cursor hidden lg:block" ref={cursorRef}>
-      <img
+      {/* <img
         src="/images/ring.png"
         alt="ring"
         role="presentation"
@@ -32,7 +32,7 @@ const CustomCursor = () => {
         alt="ring"
         role="presentation"
         className="ringTwo ring-cursor"
-      />
+      /> */}
     </div>
   )
 }

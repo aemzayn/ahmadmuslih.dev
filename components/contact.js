@@ -3,7 +3,7 @@ const { AiOutlineGithub, AiOutlineInstagram } = require('react-icons/ai')
 const Contact = ({ iconSize = '1em' }) => {
   return (
     <section className="w-full" id="contact">
-      <div className="w-full flex gap-5 text-blue-700 items-center">
+      <div className="flex w-full items-center gap-5 text-blue-700">
         <a
           href="https://github.com/aemzayn"
           referrerPolicy="no-referrer"

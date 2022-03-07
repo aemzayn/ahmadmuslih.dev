@@ -14,14 +14,14 @@ const globalReducer = (state, action) => {
       menuOverlay.classList.add('overlay-open')
       return {
         ...state,
-        menu: true
+        menu: true,
       }
     case types.MENU_CLOSE:
       document.documentElement.classList.remove('no-scroll')
       menuOverlay.classList.remove('overlay-open')
       return {
         ...state,
-        menu: false
+        menu: false,
       }
     default:
       throw new Error(`Unhandled action type of ${action.type}`)
@@ -30,7 +30,7 @@ const globalReducer = (state, action) => {
 
 export const GlobalContext = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, {
-    menu: false
+    menu: false,
   })
 
   return (

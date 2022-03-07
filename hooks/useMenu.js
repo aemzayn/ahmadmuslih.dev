@@ -30,7 +30,7 @@ const useMenu = () => {
     setOpen()
     tl.to('#menu-overlay', {
       duration: 1,
-      opacity: 1
+      opacity: 1,
     })
   }
 
@@ -40,7 +40,7 @@ const useMenu = () => {
     toggle,
     setOpen,
     setClose,
-    openMenu
+    openMenu,
   }
 }
 

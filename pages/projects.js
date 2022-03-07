@@ -7,13 +7,13 @@ const Projects = () => {
     <Layout>
       <NextSeo title="Projects" />
 
-      <div className="flex min-h-screen relative items-center justify-start w-full h-full">
+      <div className="relative flex h-full min-h-screen w-full items-center justify-start">
         <Link href="/">
           <a className="absolute top-5 right-5 tracking-widest">home</a>
         </Link>
-        <div className="flex-1 text-center flex flex-col gap-2 md:gap-4">
-          <h1 className="text-3xl md:text-7xl font-monument">Coming soon</h1>
-          <h2 className="text-xl md:text-5xl font-mono text-gray-500">
+        <div className="flex flex-1 flex-col gap-2 text-center md:gap-4">
+          <h1 className="font-monument text-3xl md:text-7xl">Coming soon</h1>
+          <h2 className="font-mono text-xl text-gray-500 md:text-5xl">
             /projects
           </h2>
         </div>

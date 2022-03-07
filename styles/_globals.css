@@ -11,7 +11,7 @@ body {
 }
 
 html.no-scroll {
-  @apply overflow-hidden h-screen;
+  @apply h-screen overflow-hidden;
 }
 
 /* width */
