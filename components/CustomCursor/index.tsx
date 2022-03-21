@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 
 const CustomCursor = () => {
-  const cursorRef = useRef(null)
+  const cursorRef = useRef<HTMLDivElement>(null)
 
-  const onMouseMove = (event) => {
+  const onMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event
     if (cursorRef.current) {
       const mouseX = clientX - cursorRef.current.clientWidth / 2
@@ -21,6 +21,9 @@ const CustomCursor = () => {
 
   return (
     <div className="custom-cursor hidden lg:block" ref={cursorRef}>
+      <div className="grid h-10 w-10 place-items-center rounded-full bg-neutral-400 bg-opacity-20">
+        <div className="h-1 w-1 rounded-full bg-white" />
+      </div>
       {/* <img
         src="/images/ring.png"
         alt="ring"

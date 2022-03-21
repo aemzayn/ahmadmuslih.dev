@@ -1,19 +1,15 @@
-import { useContextDispatch, useContextState } from 'context'
-import types from 'context/types'
 import { gsap } from 'gsap'
+import { useMenuContext } from 'context/MenuContext'
+import types from 'context/types'
 
 const useMenu = () => {
-  const dispatch = useContextDispatch()
-  const { menu } = useContextState()
+  const { isOpen, dispatch } = useMenuContext()
   const tl = gsap.timeline()
-
-  let isOpen = menu
-  let isClose = !menu
 
   const toggle = () => {
     if (isOpen) {
       dispatch({ type: types.MENU_CLOSE })
-    } else if (isClose) {
+    } else {
       dispatch({ type: types.MENU_OPEN })
     }
   }
@@ -36,7 +32,7 @@ const useMenu = () => {
 
   return {
     isOpen,
-    isClose,
+    isClose: !isOpen,
     toggle,
     setOpen,
     setClose,

@@ -1,14 +1,18 @@
+import Image from 'next/image'
 import useMenu from 'hooks/useMenu'
 
 const HamburgerMenu = () => {
   const { openMenu } = useMenu()
   return (
     <button onClick={openMenu}>
-      {/* <img
-        src="/images/hamburger.png"
-        alt="hamburger menu"
-        className="hamburger-menu h-8 w-8 md:h-10 md:w-10"
-      /> */}
+      <div className="hamburger-menu">
+        <Image
+          src="/images/hamburger.png"
+          alt="hamburger menu"
+          width={50}
+          height={50}
+        />
+      </div>
     </button>
   )
 }

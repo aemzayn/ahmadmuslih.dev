@@ -1,17 +1,17 @@
 import 'styles/globalStyles.css'
 import { DefaultSeo } from 'next-seo'
 import SEO from 'config/seo.config'
-import { GlobalContext } from 'context'
+import { MenuProvider } from 'context/MenuContext'
 import useAnalytics from 'hooks/useAnalytics'
 
 function MyApp({ Component, pageProps }) {
   useAnalytics()
 
   return (
-    <GlobalContext>
+    <MenuProvider>
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
-    </GlobalContext>
+    </MenuProvider>
   )
 }
 

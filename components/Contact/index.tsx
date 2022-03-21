@@ -1,6 +1,10 @@
-const { AiOutlineGithub, AiOutlineInstagram } = require('react-icons/ai')
+import { AiOutlineGithub, AiOutlineInstagram } from 'react-icons/ai'
 
-const Contact = ({ iconSize = '1em' }) => {
+export interface ContactProps {
+  iconSize: string | number
+}
+
+const Contact = ({ iconSize = '1em' }: ContactProps) => {
   return (
     <section className="w-full" id="contact">
       <div className="flex w-full items-center gap-5 text-blue-700">
