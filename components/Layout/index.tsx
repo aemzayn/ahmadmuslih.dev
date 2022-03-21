@@ -1,9 +1,5 @@
-import dynamic from 'next/dynamic'
-import MenuOverlay from './menu-overlay'
-
-const CustomCursor = dynamic(() => import('./custom-cursor'), {
-  ssr: false,
-})
+import CustomCursor from '../CustomCursor'
+import MenuOverlay from '../MenuOverlay'
 
 export default function Layout({ children }) {
   return (

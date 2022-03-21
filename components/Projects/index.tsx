@@ -1,37 +1,9 @@
-import Contact from './contact'
-import FeaturedProject from './featured-project'
-
-const data = [
-  {
-    id: 1,
-    year: 2021,
-    name: 'Ya! Magazine',
-    site: 'https://ya-magazine.com/',
-    description:
-      'Website for Ya! Magazine Media News company. Built with Next Js, Chakra UI and Strapi CMS.',
-    github: 'https://github.com/aemzayn/ya-magz',
-  },
-  {
-    id: 2,
-    year: 2021,
-    name: 'SAE 2021',
-    site: 'http://sae-2021.vercel.app/',
-    description:
-      'Website for Overseas Indonesian Student’s Association Alliance America-Europe Region (OISAA) Symposium 2021, Developed using Next Js and Chakra UI.',
-    github: 'https://github.com/aemzayn/sae-2021',
-  },
-  {
-    id: 3,
-    year: 2020,
-    name: 'PPI Turki Election',
-    site: '',
-    description:
-      'Election (voting) Fullstack application built using React Js, Express, MongoDB and hosted on Digital Ocean.',
-    github: 'https://github.com/aemzayn/pemilu-app',
-  },
-]
+import { getAllProjects } from 'libs/projects'
+import Contact from '../Contact'
+import FeaturedProject from 'components/FeaturedProject'
 
 const Projects = () => {
+  const projects = getAllProjects()
   return (
     <section
       id="projects"
@@ -60,7 +32,7 @@ const Projects = () => {
           data-scroll-speed={0.5}
           className="mr-5 flex flex-col gap-20 pt-8 md:mr-20 md:gap-28 md:pt-16"
         >
-          {data.map((project, id) => (
+          {projects.map((project, id) => (
             <FeaturedProject key={id} project={project} delay={id + 1} />
           ))}
         </div>

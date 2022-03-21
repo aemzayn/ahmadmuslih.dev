@@ -2,8 +2,8 @@ import { useRouter } from 'next/router'
 import { HiX } from 'react-icons/hi'
 import { gsap } from 'gsap'
 import useMenu from 'hooks/useMenu'
-import Contact from './contact'
-import { ROUTES } from 'constants/navigation'
+import Contact from '../Contact'
+import { ROUTES } from 'constants/paths'
 
 const NavItem = ({ route, isActive, router, setClose }) => {
   return (

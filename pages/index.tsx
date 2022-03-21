@@ -1,9 +1,9 @@
 import { useRef } from 'react'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
-import Layout from 'components/layout'
-import Hero from 'components/hero'
-import Projects from 'components/projects'
+import Layout from 'components/Layout'
+import Hero from 'components/Hero'
+import Projects from 'components/Projects'
 
 export default function Home() {
   const containerRef = useRef(null)

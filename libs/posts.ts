@@ -1,16 +1,17 @@
 import fs from 'fs'
-import matter from 'gray-matter'
 import { join } from 'path'
+import matter from 'gray-matter'
+import { IPost } from 'interfaces/Post'
 
-const postsDirectory = join(process.cwd(), '__posts')
+export const postsDirectory: string = join(process.cwd(), '__posts')
 
-export function getPostSlugs() {
+export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory)
 }
 
-export const getPostBySlug = (slug) => {
+export const getPostBySlug = (slug: string): IPost | {} => {
   if (!slug) {
-    throw new Error('getPostBySlug: slug must be provided')
+    return {}
   }
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
@@ -20,13 +21,16 @@ export const getPostBySlug = (slug) => {
     ...data,
     slug: data.slug ?? realSlug,
     content,
-  }
+  } as IPost
 }
 
-export function getAllPosts() {
+export function getAllPosts(): IPost[] {
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  return posts
+    .sort((post1: IPost, post2: IPost) =>
+      post1.createdAt > post2.createdAt ? -1 : 1
+    )
+
+  return posts as IPost[]
 }

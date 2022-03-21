@@ -1,6 +1,7 @@
-import Layout from '@/components/layout'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+
+import Layout from 'components/Layout'
 
 const Projects = () => {
   return (

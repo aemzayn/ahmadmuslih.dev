@@ -1,8 +1,9 @@
 import { NextSeo } from 'next-seo'
-import HamburgerMenu from '@/components/hamburger-menu'
-import Layout from '@/components/layout'
-import Post from '@/components/post'
+import HamburgerMenu from 'components/hamburger-menu'
+import Layout from 'components/Layout'
+import Post from 'components/Post'
 import { getAllPosts } from 'lib/posts'
+import { IPost } from 'interfaces/Post'
 
 export function getStaticProps() {
   const posts = getAllPosts()
@@ -13,7 +14,11 @@ export function getStaticProps() {
   }
 }
 
-const Posts = ({ posts }) => {
+export type PostsPageProps = {
+  posts: IPost[]
+}
+
+const Posts = ({ posts }: PostsPageProps) => {
   return (
     <Layout>
       <NextSeo title="Posts" />
