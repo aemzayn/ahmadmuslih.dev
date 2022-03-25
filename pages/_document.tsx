@@ -40,8 +40,8 @@ export default class MyDocument extends Document {
           <meta content="#000000" name="msapplication-TileColor" />
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-         {isProduction && (
-           <>
+          {isProduction && (
+            <>
               <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -58,8 +58,8 @@ export default class MyDocument extends Document {
               `,
                 }}
               />
-           </>
-         )}
+            </>
+          )}
         </Head>
 
         <body>

@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo'
-import HamburgerMenu from 'components/hamburger-menu'
+import HamburgerMenu from 'components/HamburgerMenu'
 import Layout from 'components/Layout'
 import Post from 'components/Post'
-import { getAllPosts } from 'lib/posts'
+import { getAllPosts } from 'libs/posts'
 import { IPost } from 'interfaces/Post'
 
 export function getStaticProps() {

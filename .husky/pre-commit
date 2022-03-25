@@ -6,23 +6,23 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Check Prettier standards
 npm run check-format ||
 (
-    echo 'Prettier check failed.';
+    echo '🖌️ Prettier check failed.';
     false;
 )
 
 # Check ESLint Standards
 npm run check-lint ||
 (
-    echo 'Eslint check failed.'
+    echo '🥾 Eslint check failed.'
     false; 
 )
 
 # Check tsconfig standards
 npm run check-types ||
 (
-    echo 'Typescript type check failed.'
+    echo '📜 Typescript type check failed.'
     false;
 )
 
 # If everything passes... Now we can commit
-echo 'Commit success.'
+echo '✅ Commit success.'
