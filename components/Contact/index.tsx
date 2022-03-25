@@ -1,0 +1,48 @@
+import { AiOutlineGithub, AiOutlineInstagram } from 'react-icons/ai'
+
+export interface ContactProps {
+  iconSize: string | number
+}
+
+const Contact = ({ iconSize = '1em' }: ContactProps) => {
+  return (
+    <section className="w-full" id="contact">
+      <div className="flex w-full items-center gap-5 text-blue-700">
+        <a
+          href="https://github.com/aemzayn"
+          referrerPolicy="no-referrer"
+          title="redirect"
+        >
+          <AiOutlineGithub
+            size={iconSize}
+            aria-label="Github link"
+            className="hidden md:block"
+          />
+          <AiOutlineGithub
+            size={25}
+            aria-label="Github link"
+            className="md:hidden"
+          />
+        </a>
+        <a
+          href="https://instagram.com/aemzayn"
+          referrerPolicy="no-referrer"
+          title="redirect"
+        >
+          <AiOutlineInstagram
+            size={iconSize}
+            aria-label="Instagram link"
+            className="hidden md:block"
+          />
+          <AiOutlineInstagram
+            size={25}
+            aria-label="Instagram link"
+            className="md:hidden"
+          />
+        </a>
+      </div>
+    </section>
+  )
+}
+
+export default Contact

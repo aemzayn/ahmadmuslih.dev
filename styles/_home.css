@@ -18,11 +18,11 @@
   );
   pointer-events: none;
 }
-.hamburger-menu {
+.hamburger-menu img {
   transition: transform 150ms;
 }
 
-.hamburger-menu:hover {
+.hamburger-menu img:hover {
   animation: shakeHamburger 200ms;
 }
 
