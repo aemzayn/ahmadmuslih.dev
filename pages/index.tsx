@@ -1,34 +1,29 @@
-import { useRef } from 'react'
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-
 import Layout from 'components/Layout'
 import Hero from 'components/Hero'
 import Projects from 'components/Projects'
+import { getAllProjects } from 'libs/projects'
+import { IProject } from 'interfaces/Project'
+import About from 'components/About'
+import Contact from 'components/Contact'
 
-export default function Home() {
-  const containerRef = useRef(null)
+export interface IndexPageProps {
+  projects: IProject[]
+}
 
+export default function Index({ projects }: IndexPageProps) {
   return (
     <Layout>
-      <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          lerp: 0.05,
-          tablet: {
-            smooth: false,
-          },
-          mobile: {
-            smooth: false,
-          },
-        }}
-        containerRef={containerRef}
-        watch={[]}
-      >
-        <main data-scroll-container id="scroll-container">
-          <Hero />
-          <Projects />
-        </main>
-      </LocomotiveScrollProvider>
+      <Hero />
+      <Projects projects={projects} />
+      <About />
+      <Contact />
     </Layout>
   )
+}
+
+export function getStaticProps() {
+  const projects = getAllProjects()
+  return {
+    props: { projects },
+  }
 }

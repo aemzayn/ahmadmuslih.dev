@@ -1,5 +1,7 @@
 #hero-main {
-  background-image: radial-gradient(#234e52 1px, #12161f 1px);
+  --bg-from: #234e52;
+  --bg-to: #12161f;
+  background-image: radial-gradient(var(--bg-from) 1px, var(--bg-to) 1px);
   background-size: 20px 20px;
 
   main {

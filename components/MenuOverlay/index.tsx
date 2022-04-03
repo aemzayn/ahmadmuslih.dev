@@ -80,9 +80,9 @@ const MenuOverlay = () => {
           </div>
 
           <div className="social-links">
-            <div className="mb-10 h-1 w-full rounded-full bg-neon bg-opacity-60" />
+            <div className="mb-10 w-full border-t border-t-neon bg-opacity-60" />
             <div className="flex items-center">
-              <Contact iconSize={30} />
+              {/* <Contact iconSize={30} /> */}
 
               <div className="relative mt-auto hidden text-center tracking-widest md:inline-block">
                 <span>ahmadmuslihzain</span>
