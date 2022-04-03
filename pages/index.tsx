@@ -22,7 +22,7 @@ export default function Index({ projects }: IndexPageProps) {
 }
 
 export function getStaticProps() {
-  const projects = getAllProjects(3)
+  const projects = getAllProjects()
   return {
     props: { projects },
   }

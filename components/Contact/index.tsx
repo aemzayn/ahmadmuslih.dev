@@ -12,9 +12,7 @@ const Contact = ({}: ContactProps) => {
           <div className="flex items-center gap-3 font-walkway text-lg tracking-widest text-neon duration-100 hover:text-white">
             ahmadmuslihzain
             <MdCopyright className="fill-neon opacity-70" />
-            <time className="text-neon" dateTime={new Date().toISOString()}>
-              {new Date().getFullYear()}
-            </time>
+            {new Date().getFullYear()}
           </div>
 
           <div className="space-x-5">
