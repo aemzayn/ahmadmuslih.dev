@@ -14,7 +14,7 @@ const Projects = ({ projects }) => {
     >
       <div className="flex flex-col gap-10 px-5 py-20 pb-36">
         <div>
-          <h1 className="title gradient-text-light ml-8 font-monument text-4xl md:ml-20">
+          <h1 className="title gradient-text-light ml-2 font-monument text-2xl md:ml-20 lg:ml-8 lg:text-4xl">
             Past projects —
           </h1>
         </div>
