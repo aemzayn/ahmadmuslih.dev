@@ -1,4 +1,4 @@
-import { AiOutlineGithub } from 'react-icons/ai'
+import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai'
 import { IProject } from 'interfaces/Project'
 
 export interface FeaturedProjectProps {
@@ -6,10 +6,7 @@ export interface FeaturedProjectProps {
   delay?: number
 }
 
-export default function FeaturedProject({
-  project,
-  delay,
-}: FeaturedProjectProps) {
+export default function FeaturedProject({ project }: FeaturedProjectProps) {
   return (
     <div className="flex w-full flex-col items-end gap-2 text-right md:gap-4">
       <div className="flex items-center font-walkway font-bold md:text-xl">
@@ -17,10 +14,19 @@ export default function FeaturedProject({
         {project?.github && (
           <a
             href={project?.github}
-            className="ml-2 flex items-center text-white"
+            className="ml-3 flex items-center text-white"
             referrerPolicy="no-referrer"
           >
             | <AiOutlineGithub className="ml-2" />
+          </a>
+        )}
+        {project?.live_url && (
+          <a
+            href={project?.live_url}
+            className="ml-1 flex items-center text-white"
+            referrerPolicy="no-referrer"
+          >
+            <AiOutlineLink className="ml-2" />
           </a>
         )}
       </div>

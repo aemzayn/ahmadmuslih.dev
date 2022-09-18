@@ -13,25 +13,21 @@ export type GTagEvent = {
 const useAnalytics = () => {
   const router = useRouter()
   const pageview = (url: URL) => {
-    ;(window as any)?.gtag('config', GA_TRACKING_ID, {
-      page_path: url,
-    })
+    if (typeof window !== undefined) {
+      ;(window as any)?.gtag('config', GA_TRACKING_ID, {
+        page_path: url,
+      })
+    }
   }
 
-  const event = ({ action, category, label, value }: GTagEvent) => {
-    ;(window as any).gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    })
-  }
-
-  const handleRouteChange = (url) => {
+  const handleRouteChange = (url: URL) => {
     pageview(url)
   }
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', handleRouteChange)
+    if (typeof window !== undefined) {
+      router.events.on('routeChangeComplete', handleRouteChange)
+    }
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }

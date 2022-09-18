@@ -9,14 +9,14 @@
   {
     "year": 2021,
     "name": "Ya! Magazine",
-    "live_url": "https://ya-magazine.com/",
+    "live_url": "https://kisalt.one/ya-magz",
     "description": "Website for Ya! Magazine Media News company. Built with Next Js, Chakra UI and Strapi CMS.",
     "github": "https://github.com/aemzayn.com/ya-magz"
   },
   {
     "year": 2021,
     "name": "SAE 2021",
-    "live_url": "http://sae-2021.vercel.app/",
+    "live_url": "https://kisalt.one/sae",
     "description": "Website for Overseas Indonesian Student’s Association Alliance America-Europe Region (OISAA) Symposium 2021, Developed using Next Js and Chakra UI.",
     "github": "https://github.com/aemzayn/sae-2021"
   },

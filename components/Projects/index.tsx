@@ -1,6 +1,5 @@
 import FeaturedProject from 'components/FeaturedProject'
 import { IProject } from 'interfaces/Project'
-import cn from 'libs/cn'
 
 export interface ProjectProps {
   projects: IProject[]

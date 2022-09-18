@@ -16,11 +16,11 @@ const Contact = ({}: ContactProps) => {
           </div>
 
           <div className="flex items-center gap-x-5 lg:gap-x-10">
-            {Object.keys(contacts).map((platform, i) => (
+            {Object.keys(contacts).map((platform, idx) => (
               <div key={platform} className="inline-flex items-center">
                 <span
                   className={cn(
-                    i > 0 && 'mr-5 h-1 w-1 rounded-full bg-white lg:mr-10'
+                    idx > 0 && 'mr-5 h-1 w-1 rounded-full bg-white lg:mr-10'
                   )}
                 />
                 <a

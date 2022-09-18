@@ -1,0 +1,5 @@
+export { NextJsIcon } from './next-js-icon'
+export { TypescriptIcon } from './typescript-icon'
+export { TailwindIcon } from './tailwind-icon'
+export { PostgresIcon } from './postgres-icon'
+export { NodeJsIcon } from './node-js-icon'
