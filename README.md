@@ -19,3 +19,7 @@ $ yarn dev
 
 - [Next Js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+
+# Sources
+
+- Svg: [SVG Repo](https://www.svgrepo.com/)
